@@ -1,0 +1,32 @@
+.selector-wrapper {
+    padding: 5px;
+    .css-yk16xz-control {
+        border: none;
+        border-style: none;
+        border-bottom: 1px solid black!important;
+        outline: none;
+        border-radius: 0%;
+        .css-1okebmr-indicatorSeparator {
+            display: none;
+        }
+    }
+    .css-yk16xz-control:hover {
+        border: none;
+        border-style: none;
+        border-bottom: 1px solid black!important;
+        outline: none;
+        .css-1okebmr-indicatorSeparator {
+            display: none;
+        }
+    }
+    .css-1pahdxg-control {
+        border: 1px solid white;
+        outline: none;
+        border-color: none;
+
+    }
+    .css-1pahdxg-control:hover {
+        border: none;
+        border-color: none;
+    }
+}

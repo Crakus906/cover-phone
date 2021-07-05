@@ -13,6 +13,7 @@
 }
   
 .modal {
+  position: relative;
   width: 400px;
   height:auto;
   background: #FFFFFF;
@@ -28,8 +29,7 @@
     background: transparent;
     outline: none;
     border: none;
-    right: 179px;
-    top: 355px;
+    right: 10px;
     transform: rotate( 0deg );            
     transition: transform 350ms ease;  
     width: 13px;
@@ -52,10 +52,19 @@
   margin: 1rem auto;
   position: relative;
   padding: 0;
-  justify-content: center;
   line-height: 1;
-  word-break: unset;
-  border-bottom: 1px solid #18627f;
+}
+
+.title::after {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  content: "";
+  bottom: -10px;
+  background-color: #18627f;
+  width: 300%;
+  max-width: 150px;
+  height: 1px;
 }
 
 select {

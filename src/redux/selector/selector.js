@@ -1,1 +1,2 @@
-export const userSelector = (state) => state.profile.user;
+export const caseSelector = (state) => state.caseCover.case;
+export const allCoverSelector = (state) => state.caseCover.allCover;

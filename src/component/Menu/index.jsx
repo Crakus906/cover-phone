@@ -8,8 +8,8 @@ export default function Menu() {
     return (  
         <div className="menu-component" >
             <div className="title-menu" onClick={() => setShow(!show)}>
-                <span>Чехлы для Apple</span>
-                <span>Чехлы для Apple iPhone 12 Pro Max</span>
+                <div>Чехлы для Apple</div>
+                <div>Чехлы для Apple iPhone 12 Pro Max</div>
             </div>
             {show ? <Modal show={show} setShow={setShow} /> : null}
         </div>
