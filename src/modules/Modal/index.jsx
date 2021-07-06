@@ -22,8 +22,8 @@ export default function Modal({ show, setShow }) {
         const a = e.slug === coverSlug;
         return a;
     });
-    console.log(constructorsData ? constructorsData[0].id : []);
-    debugger;
+    console.log(constructorsData ? constructorsData : []);
+    // debugger;
     return(
         <div className="modal-background">
             <div className="modal">
