@@ -1,10 +1,9 @@
 /* eslint-disable no-debugger */
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
-import { useField, Form, FormikProps, Formik } from "formik";
 import { useDispatch, useSelector } from "react-redux";
 import { allCoverSelector, caseSelector } from "../../redux/selector/selector";
-import { allCover } from "../../redux/action/caseCover";
+import { allCover, modalCover } from "../../redux/action/caseCover";
 import { CancelSvg } from "../../assets/icons";
 import Select from "../../component/RSelect";
 
@@ -12,8 +11,7 @@ import "./style.scss";
 
 export default function Modal({ show, setShow }) { 
     const [coverSlug, setCoverSlug] = useState("");
-
-    const dispatch = useDispatch(allCover);
+    const dispatch = useDispatch();
     
     const caseData = useSelector(caseSelector);
     const coverData = useSelector(allCoverSelector);
@@ -22,8 +20,7 @@ export default function Modal({ show, setShow }) {
         const a = e.slug === coverSlug;
         return a;
     });
-    console.log(constructorsData ? constructorsData : []);
-    // debugger;
+
     return(
         <div className="modal-background">
             <div className="modal">
@@ -38,9 +35,12 @@ export default function Modal({ show, setShow }) {
                         options={coverData}
                     />
                     {
-                        // constructorsData[0].map(e => (
-                        //     <div key={e}>{e}</div>
-                        // ))
+                        constructorsData ? constructorsData[0]?.constructors.map(e => (
+                            <div className="types-cover" key={e} onClick={() => dispatch(modalCover(constructorsData[0]?.slug, e.value))}>
+                                <span>{e.label}</span>
+                                <div className="price">{e.price} <span>грн</span> </div>
+                            </div>
+                        )) : null
                     }
             </div>
         </div>

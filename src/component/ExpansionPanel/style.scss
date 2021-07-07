@@ -1,0 +1,33 @@
+.expansion-panel {
+    padding: 15px;
+    border-bottom: 0.3px  solid rgba(255, 255, 255, 0.322);
+    color: white;
+    .menu-btn {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .block-title {
+            display: flex;
+            align-items: center;
+            svg {
+                width: 20px;
+                height: 20px;
+                color: white;
+            }
+            .text {
+                font-size: 14px;
+                margin: 0px 0 3px 5px;
+            }
+        }
+    }
+    .dropdown-child {
+        display: none;
+    }
+    
+    .dropdown-child-active {
+        display: block;
+    }
+}
+
+
+

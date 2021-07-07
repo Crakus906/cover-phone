@@ -1,0 +1,25 @@
+.menu-component {
+    background: linear-gradient(270deg,rgba(207,158,177,.7) 0,rgba(90,104,211,.7))!important;
+    height: 100vh;
+    min-width: 320px;
+    color: #fff;
+}
+.title-menu {
+    padding: 10px;
+    border-bottom: 1px solid;
+}
+.drop-down-border {
+    display: flex;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    border: 1px solid white;
+    justify-content: center;
+    font-size: 40px;
+    margin: 10px 0;
+}
+.drop-down-text {
+    text-transform: uppercase;
+    font-size: 9px;
+    letter-spacing: 1px;
+}

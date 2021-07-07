@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { Content, Menu} from "../../component/index";
+import { Content, Menu} from "../../modules/index";
 import { caseCover } from "../../redux/action/caseCover";
 
 import "./style.scss";
