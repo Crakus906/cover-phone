@@ -8,7 +8,7 @@
     padding: 10px;
     border-bottom: 1px solid;
 }
-.drop-down-border {
+.drop-down-border  {
     display: flex;
     border-radius: 50%;
     width: 60px;
@@ -22,4 +22,7 @@
     text-transform: uppercase;
     font-size: 9px;
     letter-spacing: 1px;
+}
+svg path {
+    fill: white;
 }
