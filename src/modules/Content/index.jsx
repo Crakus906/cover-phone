@@ -14,7 +14,6 @@ export default function Content() {
         title,
     } = cover;
 
-    console.log(cover);
     return (  
         <div className="content">
             <div>{title}</div>

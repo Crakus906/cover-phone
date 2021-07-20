@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { Content, Menu } from "../../modules/index";
-// import Menu from "../../modules/Menu";
+import { Menu, Content } from "../../modules/index";
 import { caseCover } from "../../redux/action/caseCover";
 
 import "./style.scss";
@@ -15,7 +14,6 @@ export default function Home() {
 
     return (  
         <div className="home">
-            hui
             <Menu />
             <Content />
         </div>

@@ -17,13 +17,13 @@ export default function Menu() {
     const caseData = useSelector(caseSelector);
     const allCoverData = useSelector(allCoverSelector);
 
-    if(!caseData || !allCoverData) return null;
+    if(!caseData) return null;
 
     return (  
         <div className="menu-component " >
             <div className="title-menu" onClick={() => setShow(!show)}>
                 <div>{nameCover}</div>
-                <div>{allCoverData[0].label}</div> 
+                <div>{allCoverData && allCoverData[0].label}</div> 
             </div>
             <ExpansionPanel
                 title="Картинки"
