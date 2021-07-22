@@ -1,4 +1,38 @@
 .content {
     width: 100%;
+    display: flex;
     justify-content: center;
+    .cover {
+        max-height: 400px;
+    }
+    .mask {
+        width: 100px;
+        height: 100px;
+    }
+    .container-cover {
+        max-width: 700px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .title-content {
+        display: flex;
+        margin: 20px;
+        text-align: center;
+        .title-cover {
+            text-decoration: underline;
+            color: #0056b3;
+            font-size: 15px;
+        }
+        .price {
+            display: flex;
+            color: #7a9196;
+            font-size: 24px;
+            border-left: 2px solid #7a9196;
+            padding: 0 15px;
+        }
+        .grn {
+            margin: 0 0 0 5px;
+        }
+    }
 }

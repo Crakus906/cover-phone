@@ -1,42 +1,42 @@
 @keyframes pulse {
   0% {
-    box-shadow: 0 0 0 0 rgba(red, 0.85);
+    box-shadow: 0 0 0 0 rgba(#fff, 0.85);
   }
 
   70% {
-    box-shadow: 0 0 0 24px rgba(red, 0);
+    box-shadow: 0 0 0 24px rgba(#fff, 0);
   }
 
   100% {
-    box-shadow: 0 0 0 0 rgba(red, 0);
+    box-shadow: 0 0 0 0 rgba(#fff, 0);
   }
 }
 
 @-webkit-keyframes pulse {
   0% {
-    box-shadow: 0 0 0 0 rgba(red, 0.85);
+    box-shadow: 0 0 0 0 rgba(#fff, 0.85);
   }
 
   70% {
-    box-shadow: 0 0 0 24px rgba(red, 0);
+    box-shadow: 0 0 0 24px rgba(#fff, 0);
   }
 
   100% {
-    box-shadow: 0 0 0 0 rgba(red, 0);
+    box-shadow: 0 0 0 0 rgba(#fff, 0);
   }
 }
 
 @-moz-keyframes pulse {
   0% {
-    box-shadow: 0 0 0 0 rgba(red, 0.85);
+    box-shadow: 0 0 0 0 rgba(#fff, 0.85);
   }
 
   70% {
-    box-shadow: 0 0 0 24px rgba(red, 0);
+    box-shadow: 0 0 0 24px rgba(#fff, 0);
   }
 
   100% {
-    box-shadow: 0 0 0 0 rgba(red, 0);
+    box-shadow: 0 0 0 0 rgba(#fff, 0);
   }
 }
 

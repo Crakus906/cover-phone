@@ -1,0 +1,26 @@
+.bottom-modal {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wraper {
+  width: 380px;
+}
+
+.create{
+  padding: 10px;
+  width: 160px;
+  text-transform: uppercase;
+  font-size: 10px;
+  border-color: green;
+  color: green;
+}
+
+.close {
+  padding: 10px;
+  width: 160px;
+  text-transform: uppercase;
+  font-size: 10px;
+  border-color: red;
+  color: red;
+}

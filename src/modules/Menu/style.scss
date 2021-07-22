@@ -9,7 +9,7 @@
     border-bottom: 1px solid;
 }
 .drop-down-border  {
-    display: flex;
+    // display: flex;
     border-radius: 50%;
     width: 60px;
     height: 60px;
@@ -17,11 +17,17 @@
     justify-content: center;
     font-size: 40px;
     margin: 10px 0;
+    background: transparent;
+    color: white;
 }
 .drop-down-text {
+    text-align: center;
+    max-width: 62px;
+    margin: 10px 0;
     text-transform: uppercase;
     font-size: 9px;
     letter-spacing: 1px;
+    
 }
 svg path {
     fill: white;

@@ -5,12 +5,16 @@ import "./style.scss";
 export default function Button(props) {
     const {
         className,
-        children
+        children,
+        onClick
     } = props;
 
     return (  
-        <div className={`button ${className}`}>
+        <button
+            className={`button ${className}`}
+            onClick={onClick}
+        >
             {children}
-        </div>
+        </button>
     );
 }

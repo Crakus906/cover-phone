@@ -3,13 +3,13 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { allCoverSelector, caseSelector } from "../../redux/selector/selector";
-import { allCover, modalCover } from "../../redux/action/caseCover";
-import { CancelSvg } from "../../assets/icons";
+import { allCover, modalCover, priceCover } from "../../redux/action/caseCover";
 import Select from "../../component/RSelect";
 
 import "./style.scss";
+import WraperModal from "../../component/WraperModal";
 
-export default function Modal({ show, setShow, setNameCover }) { 
+export default function Modal({ show, setShow, setNameCover, setSlug }) { 
     const [coverSlug, setCoverSlug] = useState("");
     const dispatch = useDispatch();
     
@@ -21,38 +21,42 @@ export default function Modal({ show, setShow, setNameCover }) {
         return a;
     });
     
-    const handleTypesCover = (constructorsData, e) => {
+    const handleNameCover = (e) => {
+        dispatch(allCover(e.slug));
+        setNameCover(e.label);
+    };
+    const handleCoverSlug = (e) => {
+        setCoverSlug(e.slug);
+        setSlug(e.label);
+    };
+    
+    const handleTypesCover = (constructorsData, e, price, ) => {
         dispatch(modalCover(constructorsData, e));
+        dispatch(priceCover(price));
         setShow(!show);
     };
 
-    const handleNameCover = (e) => {
-        dispatch(allCover(e.slug));
-        setNameCover(e.slug);
-    };
-
     return(
-        <div className="modal-background">
-            <div className="modal">
-                <CancelSvg onClick={() => setShow(!show)}/>
-                <div className="title">ВЫБОР МОДЕЛИ</div>
-                    <Select
-                        onChange={(e) => handleNameCover(e)}
-                        options={caseData}
-                    />
-                    <Select 
-                        onChange={(e) => setCoverSlug(e.slug)}
-                        options={coverData}
-                    />
-                    {
-                        constructorsData ? constructorsData[0]?.constructors.map(e => (
-                            <div className="types-cover" key={e} onClick={() => handleTypesCover(constructorsData[0]?.slug, e.value)}>
-                                <span>{e.label}</span>
-                                <div className="price">{e.price} <span>грн</span> </div>
-                            </div>
-                        )) : null
-                    }
-            </div>
-        </div>
+        <WraperModal setShow={setShow} show={show} title="ВЫБОР МОДЕЛИ">
+            <Select
+                onChange={(e) => handleNameCover(e)}
+                options={caseData}
+            />
+            <Select 
+                onChange={(e) => handleCoverSlug(e)}
+                options={coverData}
+            />
+            {
+                constructorsData ? constructorsData[0]?.constructors.map(e => (
+                    <div className="types-cover" 
+                        key={e} onClick={() => 
+                        handleTypesCover(constructorsData[0]?.slug, e.value, e.price, e.discountPrice)}
+                    >
+                        <span>{e.label}</span>
+                        <div className="price">{e.price} <span>грн</span> </div>
+                    </div>
+                )) : null
+            }
+        </WraperModal>
     );
 }

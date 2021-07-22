@@ -1,11 +1,12 @@
 import {
-    CASE, ALL_COVER, MODAL_COVER,
+    CASE, ALL_COVER, MODAL_COVER, PRICE_COVER
 } from "../action/caseCover";
 
 const initState = {
     case: null,
     allCover: null,
     modalaCover: null,
+    price: 0,
 };
 
 export default (state = initState, { type, payload }) => {
@@ -24,6 +25,11 @@ export default (state = initState, { type, payload }) => {
             return {
                 ...state,
                 modalaCover: payload,
+            };
+        case PRICE_COVER: 
+            return {
+                ...state,
+                price: payload,
             };
       default:
         return state;
