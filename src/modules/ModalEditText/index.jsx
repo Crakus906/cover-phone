@@ -7,24 +7,18 @@ import Textarea from "../../component/Textarea";
 
 import "./style.scss";
 
-export default function ModalAdText({ show, setShow, setText, text }) { 
-
-    const handleSubmit = (values) => {
-        setText([...text, values]);
-        setShow(!show);
-    };
+export default function ModalEditText({ show, setShow, value }) { 
  
     return(
-        <WraperModal setShow={setShow} show={show} title="СОЗДАТЬ ТЕКСТ" modal="wraper">
+        <WraperModal setShow={setShow} show={show} title="ИЗМЕНИТЬ ТЕКСТ" modal="wraper">
             <Formik
                 initialValues={{
-                    text: ""
+                    text: value,
                 }}
                 onSubmit={(values) => {
-                    handleSubmit(values);
+                    console.log(values);
                 }}
             >
-
                 <Form>
                     <Textarea name="text" type="text" placeholder="Начинайте вводить текст" />
                     <div className="bottom-modal">
